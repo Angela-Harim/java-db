@@ -17,7 +17,7 @@ public class Test {
             System.out.println("Connexion réussie !");
 
             // SELECT sur la table utilisateurs
-            String sql = "SELECT id, nom FROM utilisateurs";
+            String sql = "select id, nom from utilisateurs";
             PreparedStatement stmt = conn.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
 
@@ -25,7 +25,7 @@ public class Test {
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String nom = rs.getString("nom");
-                System.out.println("ID : " + id + " | Nom : " + nom);
+                System.out.println("id : " + id + " | Nom : " + nom);
             }
 
 
